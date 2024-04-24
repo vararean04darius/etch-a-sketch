@@ -7,7 +7,6 @@ holder = holder[0];
 let actualCanvas = document.getElementsByClassName("canvas");
 actualCanvas = actualCanvas[0];
 generator.addEventListener("click", () => {
-    console.log(document.body.getElementsByClassName("canvas"));
     removeGrid();
     generateGrid();
 })
@@ -16,7 +15,6 @@ let actual = 0;
 function generateGrid(){
     let numberOfSquares = prompt("Enter the number of squares you want in the canvas:");
     numberOfSquares = parseInt(numberOfSquares);
-    console.log(isNaN(numberOfSquares));
     while(isNaN(numberOfSquares) || numberOfSquares < 1 || numberOfSquares > 128){
         numberOfSquares = prompt("Enter the NUMBER. Bigger than 0 and smaller than 128");
     }
@@ -35,9 +33,7 @@ function getRandomColor(darkenValue) {
 
 function createGrid(length){
     let canvas = document.createElement("div");
-    console.log(canvas);
     actualCanvas = canvas;
-    console.log(actualCanvas);
     canvas.classList.add("canvas");
     holder.appendChild(canvas);
     for(let i=0;i<(length * length);i++){
