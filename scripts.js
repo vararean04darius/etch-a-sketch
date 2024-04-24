@@ -23,11 +23,12 @@ function generateGrid(){
     actual = numberOfSquares;
     createGrid(numberOfSquares);
 }
-function getRandomColor() {
+function getRandomColor(darkenValue) {
     var letters = '0123456789ABCDEF';
     var color = '#';
+    if(darkenValue <=0 ) return "#000000";
     for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
+      color += letters[Math.floor(Math.random() * (16 * darkenValue))];
     }
     return color;
   }
@@ -42,8 +43,11 @@ function createGrid(length){
     for(let i=0;i<(length * length);i++){
         let div = document.createElement("div");
         div.style.backgroundColor = "whitesmoke";
+        let darkenValue = 1;
         div.addEventListener("mouseover", () => {
-            div.style.backgroundColor = getRandomColor();
+            color = getRandomColor(darkenValue);
+            div.style.backgroundColor = color;
+            if(darkenValue> 0) darkenValue-=0.1;
         })
         div.addEventListener("click", () => {
             div.style.backgroundColor = "whitesmoke";
