@@ -15,8 +15,8 @@ let actual = 0;
 function generateGrid(){
     let numberOfSquares = prompt("Enter the number of squares you want in the canvas:");
     numberOfSquares = parseInt(numberOfSquares);
-    while(isNaN(numberOfSquares) || numberOfSquares < 1 || numberOfSquares > 128){
-        numberOfSquares = prompt("Enter the NUMBER. Bigger than 0 and smaller than 128");
+    while(isNaN(numberOfSquares) || numberOfSquares < 1 || numberOfSquares > 100){
+        numberOfSquares = prompt("Enter the NUMBER. Bigger than 0 and smaller than 100");
     }
     actual = numberOfSquares;
     createGrid(numberOfSquares);
