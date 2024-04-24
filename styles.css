@@ -1,3 +1,36 @@
 body {
     background-color: #2c2656;
 }
+
+.canvas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 800px;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+}
+
+.colored{
+    background-color: whitesmoke;
+}
+
+#generator {
+    background-color:white;
+    border-radius: 12px;
+    border:solid;
+    color:#2c2656;
+    height: 48px;
+    width: 125px;
+    margin:20px;
+    border-style:none;
+    border-color:lightskyblue;
+}
+
+.holder{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
